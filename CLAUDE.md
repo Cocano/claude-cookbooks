@@ -78,7 +78,9 @@ style: lint/format
    - One concept per notebook
    - Test that notebooks run top-to-bottom without errors
 
-5. **Quality checks:** Run `make check` before committing. Pre-commit hooks validate formatting and notebook structure.
+5. **Skill security:** Whenever a new skill is installed or added (Claude Code, Codex, or MCP skills), scan it with NVIDIA SkillSpector before using it: `skillspector scan <path-or-url>`. Install it if missing: `uv tool install git+https://github.com/NVIDIA/skillspector.git`. Report the findings to the user before enabling the skill.
+
+6. **Quality checks:** Run `make check` before committing. Pre-commit hooks validate formatting and notebook structure.
 
 ## Slash Commands
 
